@@ -1,0 +1,82 @@
+[
+  {
+    "id": "0",
+    "title": "Mèo Bengal",
+    "src": "image/bengal.jpg",
+    "price": 1500000,
+    "category": "Mèo",
+    "description": "Mèo Bengal là giống mèo quý hiếm, dễ thương và rất năng động."
+  },
+  {
+    "id": "1",
+    "title": "Mèo Sphynx",
+    "src": "image/sphynx.jpg",
+    "price": 1300000,
+    "category": "Mèo",
+    "description": "Mèo Sphynx không có lông, rất thông minh và thích sự chú ý."
+  },
+  {
+    "id": "2",
+    "title": "Mèo Scottish Fold",
+    "src": "image/scottish.jpg",
+    "price": 1200000,
+    "category": "Mèo",
+    "description": "Mèo Scottish Fold với đôi tai cụp đặc biệt, rất hiền lành và thân thiện."
+  },
+  {
+    "id": "3",
+    "title": "Mèo Ragdoll",
+    "src": "image/ragdoll.jpg",
+    "price": 1600000,
+    "category": "Mèo",
+    "description": "Mèo Ragdoll thân thiện, dễ chịu và thích nằm trên tay chủ."
+  },
+  {
+    "id": "4",
+    "title": "Mèo Maine Coon",
+    "src": "image/maine.jpg",
+    "price": 1800000,
+    "category": "Mèo",
+    "description": "Mèo Maine Coon to lớn, mạnh mẽ, nhưng lại rất dịu dàng và yêu thích gia đình."
+  },
+  {
+    "id": "5",
+    "title": "Mèo Persian",
+    "src": "image/persian.jpg",
+    "price": 1400000,
+    "category": "Mèo",
+    "description": "Mèo Persian lông dài, xinh đẹp và rất dễ nuôi."
+  },
+  {
+    "id": "6",
+    "title": "Mèo Abyssinian",
+    "src": "image/abyssinian.jpg",
+    "price": 1300000,
+    "category": "Mèo",
+    "description": "Mèo Abyssinian có cơ thể thon gọn, rất nhanh nhẹn và năng động."
+  },
+  {
+    "id": "7",
+    "title": "Mèo British Shorthair",
+    "src": "image/british.jpg",
+    "price": 1500000,
+    "category": "Mèo",
+    "description": "Mèo British Shorthair có bộ lông ngắn, mập mạp và rất thân thiện."
+  },
+  {
+    "id": "8",
+    "title": "Mèo Russian Blue",
+    "src": "image/russian.jpg",
+    "price": 1400000,
+    "category": "Mèo",
+    "description": "Mèo Russian Blue với bộ lông xanh bạc, rất thông minh và tình cảm."
+  },
+  {
+    "id": "9",
+    "title": "Mèo Sphynx",
+    "src": "image/sphynx2.jpg",
+    "price": 1300000,
+    "category": "Mèo",
+    "description": "Mèo Sphynx là một giống mèo không lông, nổi bật với tính cách thông minh và đáng yêu."
+  }
+]

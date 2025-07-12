@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+    <header class="header">
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="./index.html">Trang chủ</a>
+            <a href="./admin.html">Quản lý sản phẩm</a>
+            <a href="./order.html">Quản lý đơn hàng</a>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <section class="product-management">
+            <h2>Quản lý sản phẩm</h2>
+            <!-- Nút thêm sản phẩm mới -->
+            <button id="addProductBtn">Thêm sản phẩm mới</button>
+
+            <!-- Form thêm sản phẩm, mặc định ẩn đi -->
+            <div id="addProductForm" style="display: none;">
+                <h3>Thêm sản phẩm mới</h3>
+                <label for="productName">Tên sản phẩm:</label>
+                <input type="text" id="productName" />
+
+                <label for="productPrice">Giá sản phẩm:</label>
+                <input type="number" id="productPrice" />
+
+                <label for="productCategory">Danh mục:</label>
+                <input type="text" id="productCategory" />
+
+                <label for="productImage">URL Hình ảnh:</label>
+                <input type="text" id="productImage" />
+
+                <button onclick="addProduct()">Thêm sản phẩm</button>
+            </div>
+
+            <!-- Danh sách sản phẩm -->
+            <div id="productList" class="product-list">
+                <!-- Các sản phẩm sẽ được hiển thị ở đây -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr />
+        <div class="footer-info">
+            <p>© 2025 MewPetShop. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

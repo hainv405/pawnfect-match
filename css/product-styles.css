@@ -1,0 +1,60 @@
+/* Section displaying products */
+.product-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+	.product-list h2 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+#dogProducts, #catProducts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.product-item {
+	width: 250px;
+	height: 350px;
+	margin-bottom: 30px;
+	box-shadow: 0px 5px 20px rgba(17, 16, 16, 0.16);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+}
+
+	.product-item img {
+		width: 80%;
+		margin-bottom: 10px;
+		object-fit: cover;
+	}
+
+	.product-item p {
+		margin: 0;
+	}
+
+	.product-item:hover {
+		cursor: pointer;
+		background-color: #f4f4f4;
+		transform: scale(1.05);
+	}
+
+	.product-item p:nth-child(2) {
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.product-item p:nth-child(3) {
+		color: #e60000;
+		font-weight: 600;
+		font-size: 18px;
+	}

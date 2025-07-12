@@ -1,0 +1,82 @@
+[
+  {
+    "id": "0",
+    "title": "Chó Poodle",
+    "src": "image/poodle.jpg",
+    "price": 500000,
+    "category": "Chó",
+    "description": "Chó Poodle dễ thương, thông minh và là bạn đồng hành tuyệt vời."
+  },
+  {
+    "id": "1",
+    "title": "Chó Husky",
+    "src": "image/husky.jpg",
+    "price": 800000,
+    "category": "Chó",
+    "description": "Chó Husky với bộ lông dày, mạnh mẽ, thích hoạt động và rất thân thiện."
+  },
+  {
+    "id": "2",
+    "title": "Chó Bulldog",
+    "src": "image/bulldog.jpg",
+    "price": 600000,
+    "category": "Chó",
+    "description": "Chó Bulldog có tính cách hiền lành, thích ngủ và là bạn đồng hành lý tưởng."
+  },
+  {
+    "id": "3",
+    "title": "Chó Beagle",
+    "src": "image/beagle.jpg",
+    "price": 550000,
+    "category": "Chó",
+    "description": "Chó Beagle thân thiện, năng động, là giống chó săn tuyệt vời."
+  },
+  {
+    "id": "4",
+    "title": "Chó Rottweiler",
+    "src": "image/rottweiler.jpg",
+    "price": 900000,
+    "category": "Chó",
+    "description": "Chó Rottweiler mạnh mẽ, thông minh và là chó bảo vệ xuất sắc."
+  },
+  {
+    "id": "5",
+    "title": "Chó Cocker Spaniel",
+    "src": "image/cocker.jpg",
+    "price": 700000,
+    "category": "Chó",
+    "description": "Chó Cocker Spaniel đáng yêu, dễ huấn luyện và phù hợp với các gia đình."
+  },
+  {
+    "id": "6",
+    "title": "Chó Dachshund",
+    "src": "image/dachshund.jpg",
+    "price": 400000,
+    "category": "Chó",
+    "description": "Chó Dachshund có hình dáng đặc biệt, thông minh và đáng yêu."
+  },
+  {
+    "id": "7",
+    "title": "Chó Shiba Inu",
+    "src": "image/shiba.jpg",
+    "price": 950000,
+    "category": "Chó",
+    "description": "Chó Shiba Inu dễ thương, trung thành và có tính cách độc lập."
+  },
+  {
+    "id": "8",
+    "title": "Chó Chihuahua",
+    "src": "image/chihuahua.jpg",
+    "price": 300000,
+    "category": "Chó",
+    "description": "Chó Chihuahua nhỏ nhắn nhưng rất dũng cảm, thích hợp với không gian nhỏ."
+  },
+  {
+    "id": "9",
+    "title": "Chó Pomeranian",
+    "src": "image/pomeranian.jpg",
+    "price": 750000,
+    "category": "Chó",
+    "description": "Chó Pomeranian nhỏ gọn, lông xù, năng động và rất thân thiện."
+  }
+]
