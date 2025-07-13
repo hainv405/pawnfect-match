@@ -87,9 +87,9 @@ function linkToProductInfo() {
                 // Nếu chạy trên GitHub Pages, đường dẫn cần chính xác
                 const currentUrl = window.location.href;
                 if (currentUrl.includes("github.io")) {
-                    window.location.href = "/html/product-detail.html"; // hoặc dùng full path nếu cần
+                    window.location.href = "/pawnfect-match/html/product-detail.html"; // hoặc dùng full path nếu cần
                 } else {
-                    window.location.href = "./html/product-detail.html";
+                    window.location.href = "/pawnfect-match/html/product-detail.html";
                 }
             } else {
                 console.warn("Không tìm thấy sản phẩm:", titleElement);
