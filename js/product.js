@@ -18,10 +18,10 @@ function preloadData() {
         });
 }
 
-// Hàm lấy category từ localStorage để lọc sản phẩm
-var idPage = JSON.parse(localStorage.getItem("idPageProduct"));
+// Hàm lấy category từ URL để lọc sản phẩm
 function getCategory() {
-    return idPage;
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("category");
 }
 
 function onLoad() {
@@ -45,7 +45,7 @@ function onLoad() {
     document.getElementById("product-list").innerHTML = productHTML;  // Ghi HTML vào phần tử chứa danh sách sản phẩm
 
     // Cập nhật tiêu đề trang (nếu cần thiết)
-    switch (idPage) {
+    switch (getCategory()) {
         case "dog-food": {
             document.querySelector("h1").innerHTML = "Hạt cho chó";
             break;
@@ -113,7 +113,7 @@ function openProductDetail(products) {
             }
 
             // Chuyển sang trang chi tiết sản phẩm
-            window.location.href = "pawnfect-match/html/product-detail.html";
+            window.location.href = "../html/product-detail.html";
         });
     });
 }
