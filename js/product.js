@@ -113,7 +113,7 @@ function openProductDetail(products) {
             }
 
             // Chuyển sang trang chi tiết sản phẩm
-            window.location.href = "../html/product-detail.html";
+            window.location.href = "pawnfect-match/html/product-detail.html";
         });
     });
 }
