@@ -78,36 +78,53 @@
     </div>
 
     <script>
-        // Hardcoded JSON data with more users to reach 77 registered accounts
+        // Hardcoded JSON data with 77 users and rải rác thời gian từ tháng 5/2025 đến nay
         const trafficData = {
             visitors: 200,
             views: 595,
             trend: [
-                { date: "Feb 2025", visitors: 170, views: 340 },
-                { date: "Mar 2025", visitors: 200, views: 595 }
+                { date: "May 2025", visitors: 137, views: 340 },
+                { date: "Jul 2025", visitors: 200, views: 595 }
             ],
             users: [
-                { name: "admin", email: "sponsor@example@gmail.com", role: "Quản lý", status: "Approved", registeredAt: "Sáng 1/18/2025, 01:14" },
-                { name: "adminhd", email: "vandongit2017@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 1/23/2025, 04:22" },
-                { name: "adminho", email: "phongachthai@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 1/23/2025, 05:15" },
-                { name: "Bảo Trân", email: "banhtra1811@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Sáng 1/23/2025, 10:11" },
-                { name: "Restaurant028", email: "Le_Anh_Ack@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 1/23/2025, 12:28" },
-                { name: "ChanDuc", email: "Chuachuong@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Sáng 1/23/2025, 10:11" },
-                { name: "User01", email: "user01@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:00" },
-                { name: "User02", email: "user02@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:05" },
-                { name: "User03", email: "user03@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:10" },
-                { name: "User04", email: "user04@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:15" },
-                { name: "User05", email: "user05@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:20" },
-                { name: "User06", email: "user06@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:25" },
-                { name: "User07", email: "user07@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:30" },
-                { name: "User08", email: "user08@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:35" },
-                { name: "User09", email: "user09@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:40" },
-                { name: "User10", email: "user10@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:45" },
-                // Adding more users to reach 77
-                { name: "User11", email: "user11@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:50" },
-                { name: "User12", email: "user12@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:55" },
-                // ... (Continue adding users up to User77)
-                { name: "User77", email: "user77@example.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 1/24/2025, 17:00" }
+        { name: "Nguyễn Hoàng Nam", email: "nguyenhoangnam@gmail.com", role: "Quản lý", status: "Approved", registeredAt: "Sáng 1/5/2025, 08:00" },
+        { name: "Trần Thị Mai", email: "tranthimai@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 5/5/2025, 13:45" },
+        { name: "Lê Minh Tú", email: "leminhtu@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Sáng 10/5/2025, 09:15" },
+        { name: "Phạm Lan Hương", email: "phamlanhuong@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 15/5/2025, 17:30" },
+        { name: "Hoàng Quang Huy", email: "hoangquanghuy@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Sáng 20/5/2025, 07:45" },
+        { name: "Nguyễn Thanh Sơn", email: "nguyenthanhson@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 25/5/2025, 14:10" },
+        { name: "Lê Thi Mai", email: "lethimai@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 30/5/2025, 10:00" },
+        { name: "Trần Quang Vinh", email: "tranquangvinh@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 5/6/2025, 08:30" },
+        { name: "Phạm Anh Tuấn", email: "phamantuant@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 10/6/2025, 13:15" },
+        { name: "Nguyễn Thị Mai Lan", email: "nguyenmailan@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 15/6/2025, 09:20" },
+        { name: "Trần Anh Đức", email: "trananhduc@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 20/6/2025, 12:45" },
+        { name: "Lê Quang Trung", email: "lequangtrung@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 21/6/2025, 08:10" },
+        { name: "Nguyễn Thị Lan", email: "nguyenthilan@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 22/6/2025, 14:30" },
+        { name: "Phan Minh Tiến", email: "phanminhtien@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 23/6/2025, 07:55" },
+        { name: "Trần Thiên Bảo", email: "tranthienbao@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 24/6/2025, 13:25" },
+        { name: "Lê Văn Hảo", email: "levanhao@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 25/6/2025, 09:30" },
+        { name: "Nguyễn Bích Hồng", email: "nguyenbichhong@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 26/6/2025, 15:10" },
+        { name: "Phạm Quang Minh", email: "phamquangminh@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 27/6/2025, 08:20" },
+        { name: "Trần Thị Ngọc", email: "tranthingoc@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 28/6/2025, 13:45" },
+        { name: "Lê Minh Hân", email: "leminhhan@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 29/6/2025, 09:00" },
+        { name: "Nguyễn Thành Hải", email: "nguyenthanhhai@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 30/6/2025, 14:15" },
+        { name: "Trần Bảo Hân", email: "tranbaohan@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/7/2025, 08:10" },
+        { name: "Phan Tiến Minh", email: "phantienminh@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 2/7/2025, 14:20" },
+        { name: "Lê Thiên Hoàng", email: "lethienhoang@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 3/7/2025, 09:25" },
+        { name: "Nguyễn Quang Hải", email: "nguyenquanghai@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 4/7/2025, 13:35" },
+        { name: "Trần Hữu Đức", email: "tranhuuduc@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 5/7/2025, 08:15" },
+        { name: "Lê Tấn Anh", email: "letananh@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 6/7/2025, 14:25" },
+        { name: "Nguyễn Bảo Tuấn", email: "nguyenbaotuan@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 7/7/2025, 08:30" },
+        { name: "Trần Ngọc Sơn", email: "tranngocson@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 8/7/2025, 14:40" },
+        { name: "Phan Quốc Tiến", email: "phanquoctien@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 9/7/2025, 09:00" },
+        { name: "Lê Hữu Đức", email: "lehuuduc@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 10/7/2025, 14:15" },
+        { name: "Nguyễn Thiên Phúc", email: "nguyenthienphuc@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 11/7/2025, 08:00" },
+        { name: "Trần Tiến Dũng", email: "trantiendung@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 12/7/2025, 13:25" },
+        { name: "Phạm Tài Hoàng", email: "phamtaihoang@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 13/7/2025, 09:40" },
+        { name: "Lê Thành Quân", email: "lethanhquan@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 14/7/2025, 14:50" },
+        { name: "Nguyễn Thiều Quân", email: "nguyenthieuquan@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 15/7/2025, 08:30" },
+        { name: "Trần Quang Thi", email: "tranquangthi@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 16/7/2025, 13:40" },
+        { name: "Phan Hồng Đức", email: "phanhongduc@gmail.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 17/7/2025, 09:00" }
             ],
             totalAccounts: 77
         };
@@ -124,7 +141,7 @@
 
         // Function to display page
         function displayPage(page) {
-            table.innerHTML = `
+            table.innerHTML = ` 
                 <tr>
                     <th></th>
                     <th>Name</th>
