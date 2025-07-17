@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Traffic Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .chart {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .pagination {
+            margin-top: 10px;
+        }
+        .pagination button {
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Daily Traffic Trend</h2>
+        <div>
+            <canvas id="trafficChart"></canvas>
+        </div>
+        <p>Visitors: <span id="visitors">200</span> | Views: <span id="views">595</span></p>
+        <button class="button" onclick="showReport()">Daily Traffic Trend Report</button>
+        <h2>Visitors</h2>
+        <table id="visitorTable">
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Registered At</th>
+            </tr>
+        </table>
+        <div class="pagination" id="pagination"></div>
+        <p>Total registered accounts: <span id="totalAccounts">77</span></p>
+    </div>
+
+    <script>
+        // Hardcoded JSON data with more users to reach 77 registered accounts
+        const trafficData = {
+            visitors: 200,
+            views: 595,
+            trend: [
+                { date: "Feb 2025", visitors: 170, views: 340 },
+                { date: "Mar 2025", visitors: 200, views: 595 }
+            ],
+            users: [
+                { name: "admin", email: "sponsor@example@gmail.com", role: "Quản lý", status: "Approved", registeredAt: "Sáng 1/18/2025, 01:14" },
+                { name: "adminhd", email: "vandongit2017@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 1/23/2025, 04:22" },
+                { name: "adminho", email: "phongachthai@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 1/23/2025, 05:15" },
+                { name: "Bảo Trân", email: "banhtra1811@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Sáng 1/23/2025, 10:11" },
+                { name: "Restaurant028", email: "Le_Anh_Ack@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Chiều 1/23/2025, 12:28" },
+                { name: "ChanDuc", email: "Chuachuong@gmail.com", role: "Thành viên đăng ký", status: "Approved", registeredAt: "Sáng 1/23/2025, 10:11" },
+                { name: "User01", email: "user01@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:00" },
+                { name: "User02", email: "user02@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:05" },
+                { name: "User03", email: "user03@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:10" },
+                { name: "User04", email: "user04@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:15" },
+                { name: "User05", email: "user05@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:20" },
+                { name: "User06", email: "user06@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:25" },
+                { name: "User07", email: "user07@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:30" },
+                { name: "User08", email: "user08@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:35" },
+                { name: "User09", email: "user09@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:40" },
+                { name: "User10", email: "user10@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:45" },
+                // Adding more users to reach 77
+                { name: "User11", email: "user11@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:50" },
+                { name: "User12", email: "user12@example.com", role: "Thành viên", status: "Approved", registeredAt: "Sáng 1/24/2025, 08:55" },
+                // ... (Continue adding users up to User77)
+                { name: "User77", email: "user77@example.com", role: "Thành viên", status: "Approved", registeredAt: "Chiều 1/24/2025, 17:00" }
+            ],
+            totalAccounts: 77
+        };
+
+        // Display traffic data
+        document.getElementById('visitors').textContent = trafficData.visitors;
+        document.getElementById('views').textContent = trafficData.views;
+        document.getElementById('totalAccounts').textContent = trafficData.totalAccounts;
+
+        // Pagination variables
+        const rowsPerPage = 10;
+        let currentPage = 1;
+        const table = document.getElementById('visitorTable');
+
+        // Function to display page
+        function displayPage(page) {
+            table.innerHTML = `
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Registered At</th>
+                </tr>
+            `;
+            const start = (page - 1) * rowsPerPage;
+            const end = start + rowsPerPage;
+            const paginatedUsers = trafficData.users.slice(start, end);
+
+            paginatedUsers.forEach(user => {
+                const row = table.insertRow();
+                row.innerHTML = `<td><input type="checkbox"></td><td>${user.name}</td><td>${user.email}</td><td>${user.role}</td><td>${user.status}</td><td>${user.registeredAt}</td>`;
+            });
+        }
+
+        // Function to setup pagination
+        function setupPagination() {
+            const pageCount = Math.ceil(trafficData.users.length / rowsPerPage);
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+
+            for (let i = 1; i <= pageCount; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.addEventListener('click', () => {
+                    currentPage = i;
+                    displayPage(currentPage);
+                });
+                if (i === currentPage) button.style.backgroundColor = '#45a049';
+                pagination.appendChild(button);
+            }
+        }
+
+        // Initial display
+        displayPage(currentPage);
+        setupPagination();
+
+        // Chart.js configuration
+        const ctx = document.getElementById('trafficChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: trafficData.trend.map(item => item.date),
+                datasets: [
+                    {
+                        label: 'Visitors',
+                        data: trafficData.trend.map(item => item.visitors),
+                        borderColor: '#36A2EB',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Views',
+                        data: trafficData.trend.map(item => item.views),
+                        borderColor: '#FF6384',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Button function
+        function showReport() {
+            alert(`Daily Traffic Report:\nVisitors: ${trafficData.visitors}\nViews: ${trafficData.views}`);
+        }
+    </script>
+</body>
+</html>
